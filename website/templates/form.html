@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fruit Classifier</title>
+		<link rel="stylesheet" href="./static/style.css" />
+		<script src="./static/script.js"></script>
+		<link rel="icon" href="../static/logo.png" type="image/x-icon" />
+	</head>
+	<body>
+		<form id="uploadForm" enctype="multipart/form-data">
+			<input type="file" name="fruit" id="fruit" /><br />
+			<label>Predicted fruit name: <span class="predicted_name"></span></label
+			><br />
+			<label>Confidence: <span class="confidence"></span></label><br />
+			<img src="" alt="Predicted fruit" class="fruit_image" /><br />
+			<input type="submit" />
+		</form>
+	</body>
+</html>
