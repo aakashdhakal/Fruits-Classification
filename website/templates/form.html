@@ -7,15 +7,35 @@
 		<link rel="stylesheet" href="./static/style.css" />
 		<script src="./static/script.js"></script>
 		<link rel="icon" href="../static/logo.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins&Open+Sans&display=swap"
+			rel="stylesheet" />
 	</head>
 	<body>
-		<form id="uploadForm" enctype="multipart/form-data">
-			<input type="file" name="fruit" id="fruit" /><br />
-			<label>Predicted fruit name: <span class="predicted_name"></span></label
-			><br />
-			<label>Confidence: <span class="confidence"></span></label><br />
-			<img src="" alt="Predicted fruit" class="fruit_image" /><br />
-			<input type="submit" />
-		</form>
+		<div class="container">
+			<div class="logo_container">
+				<img src="../static/logo.png" alt="" class="logo" />
+				<h1>Fruit Classifier</h1>
+			</div>
+			<div class="form-group">
+				<form id="uploadForm" enctype="multipart/form-data">
+					<label for="fruit">Upload Image</label>
+					<input type="file" name="fruit" id="fruit" />
+					<label
+						>Predicted fruit name: <span class="predicted_name"></span
+					></label>
+					<label>Confidence: <span class="confidence"></span></label>
+					<button type="submit" id="submitBtn">Predict</button>
+				</form>
+				<div class="preview_image">
+					<img
+						src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="Predicted fruit"
+						class="fruit_image" />
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
