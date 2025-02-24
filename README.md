@@ -1,70 +1,61 @@
-🍎 Fruit Classification using Deep Learning
+# 🍎 Fruit Classification with Deep Learning
 
-🎯 Project Overview
+## 📌 Project Overview
+This project is a deep learning-based fruit classification system that utilizes a convolutional neural network (CNN) trained on the **Fruits-360** dataset. The model is capable of predicting fruit types from both images and a real-time webcam feed.
 
-This project is a real-time fruit classification system that uses a deep learning model to identify different types of fruits from webcam images. Built with TensorFlow and OpenCV, this project provides a fast and accurate way to recognize fruits using a custom-trained Convolutional Neural Network (CNN).
+## 🚀 Features
+- **Train a CNN model** to classify different fruit types.
+- **Predict fruit from images** using the trained model.
+- **Real-time fruit classification using a webcam**.
+- **Web API support** to integrate predictions into web applications.
 
-🛠️ Tech Stack
+## 🏗️ Technologies Used
+- **Python** (TensorFlow, OpenCV, NumPy, Matplotlib, Flask)
+- **TensorFlow/Keras** for deep learning
+- **OpenCV** for real-time webcam processing
+- **Flask** for web API
 
-Python (Primary Language)
+## 📂 Project Structure
+```
+📁 fruit-classification
+│-- 📂 fruits             # Training and testing dataset
+     |-- 📂 train         # Training Dataset
+     |-- 📂 test          # Testing Dataset
+│-- 📂 website            # Files for Flask Website
+     |-- 📂 static        # Web static files (if applicable)
+     |-- 📂 templetes     # Web templates (if applicable)
+     |-- 📜 app.py        # Flask API for fruit classification
+│-- 📜 model.ipynb        # Jupyter notebook for training the CNN model
+│-- 📜 requirements.txt   # Required dependencies
+│-- 📜 README.md          # Project documentation
+```
 
-TensorFlow/Keras (Model Training & Prediction)
-
-OpenCV (Webcam Image Capture & Preprocessing)
-
-NumPy & Pandas (Data Handling)
-
-Matplotlib (Data Visualization)
-
-Flask (Optional) (For API Deployment)
-
-📂 Project Structure
-
-📁 Fruit-Classification
-├── 📂 dataset          # Training & testing dataset
-├── 📂 models           # Saved trained models
-├── 📂 scripts          # Helper scripts for training & prediction
-├── model.ipynb         # Jupyter Notebook for training the model
-├── Opencv.ipynb        # Jupyter Notebook for real-time prediction
-├── app.py              # Flask API (if applicable)
-├── requirements.txt    # Dependencies list
-└── README.md           # Project documentation
-
-🚀 Features
-
-✅ Train a deep learning model to classify fruits with high accuracy. ✅ Capture images from the webcam and predict the fruit type in real time. ✅ Efficient preprocessing using OpenCV. ✅ Lightweight and optimized for deployment.
-
-🎥 Real-Time Prediction
-
-Run the following command to start the real-time fruit classification:
-
-python real_time_fruit_classification.py
-
-📦 Installation
-
-Clone the repository:
-
-git clone https://github.com/yourusername/fruit-classification.git
-cd fruit-classification
-
-Install dependencies:
-
+## 🎯 How to Use
+### 1️⃣ Setup Environment
+```sh
 pip install -r requirements.txt
+```
 
-Run the Jupyter notebooks for training and testing.
+### 2️⃣ Train the Model
+Run `model.ipynb` to train the CNN model and save it.
 
-Execute the script to start real-time classification.
+### 3️⃣ Predict from Image
+Run `app.py` and send an image for prediction:
+```sh
+python app.py
+```
 
-📊 Model Performance
+## 📌 Example Prediction Output
+```json
+{
+  "predicted_fruit": "Apple",
+  "confidence_level": 98.7
+}
+```
 
-The model was trained on the Fruits-360 dataset and additional images, achieving an accuracy of 90%+ on the test set.
+## 🤖 Future Improvements
+- Increase dataset size for better accuracy.
+- Improve real-time detection speed.
 
-🤖 Future Improvements
-
-🔹 Improve model accuracy with data augmentation. 🔹 Implement a mobile-friendly version. 🔹 Enhance the UI for better user experience.
-
-📝 License
-
-This project is open-source and available under the MIT License.
-
-🚀 Made with passion by Aakash Dhakal ✨
+## 📜 License
+This project is open-source and available under the **MIT License**.
