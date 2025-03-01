@@ -16,10 +16,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose the Flask port
 EXPOSE 5000
 
-# Define environment variables for Flask
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=5000
-
-# Run the Flask application
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Run the Flask application using Gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
