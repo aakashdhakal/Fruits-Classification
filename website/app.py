@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 # Load the model
-model = tf.keras.models.load_model('../fruits_classification.keras')
+model = tf.keras.models.load_model('./fruits_classification.keras')
 
 # Define the image size
 IMAGE_SIZE, IMAGE_SIZE = 100, 100
