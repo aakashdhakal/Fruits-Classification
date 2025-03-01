@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 # Load the model
-model = tf.keras.models.load_model('./../fruits_classification.keras')
+model = tf.keras.models.load_model('../fruits_classification.keras')
 
 # Define the image size
 IMAGE_SIZE, IMAGE_SIZE = 100, 100
@@ -28,7 +28,7 @@ def predict_image(img_path):
 
 def class_names():
     # Extract class names from the folder names
-    fruits_names = sorted(os.listdir('./../fruits/train'))
+    fruits_names = ['apple','avocado','banana','blueberry','cherry','dragonfruit','grape','guava','kiwi','lychee','mango','orange','papaya','pear','pineapple','pomegranate','raspberry','strawberry','watermelon']
     return fruits_names
 
 @app.route('/', methods=['GET'])
